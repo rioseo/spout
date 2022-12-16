@@ -25,7 +25,7 @@ trait Singleton
     /**
      * Singleton constructor.
      */
-    final private function __construct()
+    private function __construct()
     {
         $this->init();
     }
@@ -36,6 +36,6 @@ trait Singleton
      */
     protected function init() {}
 
-    final private function __wakeup() {}
-    final private function __clone() {}
+    public function __wakeup() {}
+    private function __clone() {}
 }
